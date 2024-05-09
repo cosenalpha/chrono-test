@@ -1,0 +1,269 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  overflow-y: hidden;
+  background-color: black;
+  color: white;
+}
+
+
+ canvas {
+  display: block;
+  cursor: none;
+} 
+
+.custom-cursor {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 350ms ease;
+  transform: translate(-50%, -50%) scale(.3);
+  z-index: 1000;
+}
+
+.custom-cursor--link {
+  transform: translate(-50%, -50%) scale(.7);
+}
+
+
+/*
+*
+*    Author:    Michael Raffaele <michael@mraffaele.com>
+*    Date:    25th October 2011
+*    Info:     http://www.mraffaele.com/blog/2011/10/25/css-accordion-no-javascript/
+*
+*/
+
+/* Shared for all accordion types */
+.accordion {
+  font-family:Arial, Helvetica, sans-serif; 
+  margin:0 auto;
+  font-size:14px;
+  width:100vw;
+  height: 100vh;
+  padding:0px;
+  background:black;
+}
+
+h1  {
+  font-family:Bebas Neue; 
+  font-size:130px;
+  margin:0 auto;
+  /* border: 1px solid blue; */
+  width:100%;
+  padding:0 2vw;
+}
+
+h2 {
+  font-family:Arial, Helvetica, sans-serif; 
+  float: left;
+  /* border: 1px solid yellow; */
+  font-size: 32px;
+  margin: 0;
+  width: 100%;
+  padding: 4vh 0;
+
+}
+
+h3 {
+  padding: 2vw 0 0 2vw;
+}
+
+h4  {
+  font-family:Bebas Neue; 
+  font-size:40px;
+  margin:0;
+}
+
+.content p {
+  font-family:Neue Haas Grotesk Display, Arial, sans-serif; 
+  float: left;
+  /* border: 1px solid green; */
+  width: 100%;
+  font-size: 18px;
+  margin: 0;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.column-1 {
+  /* border: 1px solid purple; */
+  float:inline-start;
+  width: 60%;
+  height:auto;
+  padding: 0 12% 0 2vw;
+}
+
+.column-2 {
+  /* border: 1px solid violet; */
+  float:inline-start;
+  width: 30%;
+  height:auto;
+  padding: auto;
+}
+
+.accordion ul {
+  list-style:none;
+  margin:0;
+  padding:0;    
+}
+
+.accordion li {
+  margin:0;
+  padding:0;
+}
+.accordion [type=radio], .accordion [type=checkbox] {
+  display:none;
+}
+.accordion label {
+  display:block;
+  font-size:16px;
+  line-height:16px;
+  font-weight:700;
+  /* cursor:pointer; */
+  text-transform:uppercase;
+  transition:all 0.5s ease-out; 
+
+  /* -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out; */
+}
+
+.accordion .content {
+  width:75vw;
+  padding: 2vw;
+  overflow:hidden;
+  border: 0;     /* Make the border match the background so it fades in nicely */
+  transition:all 0.5s ease-out; 
+  /* -webkit-transition: all .5s ;
+  -moz-transition: all .5s ease-out; */
+}
+
+
+/* Horizontal */
+/* Unfortunately fixed heights need to be set for this */
+.horizontal {
+  overflow:hidden;
+  height: 100vh;
+}
+.horizontal ul li {
+  float:left;
+  margin:0;
+  padding: 0;
+}
+.horizontal ul li label {
+  text-align: center;
+  height:100vh;
+  /* padding:10px 0 10px 5px; */
+  width:4.9vw;
+  padding: 2vw;
+  float: left;
+  /* border: 2px solid pink; */
+  border-right:1px solid white;  /* Again, we don't want the border to disappear on hover */
+}
+
+.horizontal ul li label:hover .custom-cursor{
+  transform: translate(-50%, -50%) scale(.7);
+}
+
+.rotate {
+  color: white;
+  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  /* border: 1px solid blue; */
+}
+
+.horizontal ul li .content {
+  height:100vh;
+  padding: 0;
+  display: inline-block; /* Makes its work in FF */
+  visibility: hidden; /* Chrome bug cant show width < 1px for some reason so need to toggle visibility */
+  width: 1px;
+  margin: 0px;
+  border-left:0;
+  /* border: 2px solid blue; */
+  border-right:1px solid white; 
+}
+
+.horizontal [type=radio]:checked ~ label {
+  display: none;
+  border-right:0;    
+}
+
+.horizontal [type=radio]:checked ~ label .rotate {
+  transform: none;
+}
+
+.horizontal ul li label:hover {
+  border-right: 1px solid white; /* Again, we don't want the border to disappear on hover */
+  font-size: 18px;
+}
+
+.horizontal [type=radio]:checked ~ label ~ .content {    
+  visibility:visible;
+  width:75vw;
+  /* border: 1px solid purple; */
+  /* padding:  2vw; */
+  border: 0;    
+  border-right:1px solid white; 
+}
+
+
+
+.content {
+  padding: 2vw;
+  border: 2px solid purple;
+}
+
+/* .accordion ul li label:hover, .accordion [type=radio]:checked ~ label, .accordion [type=checkbox]:checked ~ label {
+  background:#C02942;
+  color:#FFF;
+  text-shadow:1px 1px 1px rgba(0,0,0,0.5)
+} */
+
+
+
+
+/* MOBILE */
+
+@media (max-width: 743px) { 
+
+/* Vertical */
+.horizontal ul li {
+  overflow:hidden;
+  margin:0 0 1px;
+}
+.horizontal ul li label {
+  padding:10px;
+}
+.horizontal [type=radio]:checked ~ label, .horizontal [type=checkbox]:checked ~ label {
+  border-bottom:0;
+}
+.horizontal ul li label:hover {
+  border:1px solid #542437; /* We don't want the border to disappear on hover */
+}
+.horizontal ul li .content {
+  height:0px;
+  border-top:0;
+}
+.horizontal [type=radio]:checked ~ label ~ .content, .horizontal [type=checkbox]:checked ~ label ~ .content {
+  height:300px;
+  border:1px solid #542437;
+}
+}

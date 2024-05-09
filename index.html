@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chrono</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+<!-- 
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.1/TweenMax.min.js"></script>
+
+    <script src="http://clou.agency/wp-content/themes/clou-digital-agency/js/frontpage/Scrollsmoother.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+
+  </head>
+
+
+  <body>
+    <!-- <script src="sketch.js"></script> -->
+    <div class="accordion horizontal">
+      <ul>
+          <li>
+              <input type="radio" id="vert-1" name="vert-accordion" checked="checked" />
+              <label for="vert-1"><p class="rotate">cos'è chrono</p></label>
+              <div class="content">
+                  <h3>CHRONO</h3>
+                  <h1>cos'è chrono</h1>
+                <div class="column-1">
+                  <p>Chrono è un progetto collettivo nato nella primavera del 2021 da poco più di un'intuizione:</p>
+                  <h2>Se <span class="underlined">chi racconta le nostre lotte è chi combattiamo</span>, come pretendiamo che queste abbiano <span class="underlined">un impatto positivo nella nostra società</span>?</h2>
+                  <p>Questa prima riflessione è stata poi man mano elaborata nel tempo studiando e approfondendo il ruolo dell'informazione e della comunicazione nella società contemporanea.<br><br>
+                  Oggi ci poniamo come primo obiettivo quello di creare un polo di controinformazione che miri a promuovere una maggiore consapevolezza delle contraddizioni del capitalismo e favorisca un'informazione attiva per le classi sfruttate.</p>
+                </div>
+
+                <div class="column-2">
+                    <h4>CHRONOZINE</h4>
+                    <p>Concepita per essere diffusa, stampata, discussa e conservata, queste Zine sono concepite come parte di un processo politico partecipativo e attivo di in-formazione.</p>
+                  </div>
+              </div>
+          </li>
+          <li>
+              <input type="radio" id="vert-2" name="vert-accordion" />
+              <label for="vert-2"><p class="rotate">VOX</p></label>
+              <div class="content">
+                <h3>CHRONO</h3>
+                <h1>vox</h1>                
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                  <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+              </div>
+          </li>
+          <li>
+              <input type="radio" id="vert-3" name="vert-accordion" />
+              <label for="vert-3"><p class="rotate">APPROFONDIMENTI</p></label>
+              <div class="content">
+                <h3>CHRONO</h3>
+                <h1>approfondimenti</h1>
+                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                  <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+              </div>
+          </li>
+          <li>
+              <input type="radio" id="vert-4" name="vert-accordion" />
+              <label for="vert-4"><p class="rotate">FORMAZIONE</p></label>
+              <div class="content">
+                <h3>CHRONO</h3>
+                <h1>formazione</h1>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                  <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+              </div>
+          </li>
+          <li>
+            <input type="radio" id="vert-5" name="vert-accordion" />
+            <label for="vert-5"><p class="rotate">PROGETTI</p></label>
+            <div class="content">
+                <h3>CHRONO</h3>
+                <h1>progetti</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+            </div>
+        </li>
+        <li>
+            <input type="radio" id="vert-6" name="vert-accordion" />
+            <label for="vert-6"><p class="rotate">SOSTIENICI</p></label>
+            <div class="content">
+                <h3>CHRONO</h3>
+                <h1>sostienici</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec posuere lorem. Pellentesque hendrerit, lorem luctus porttitor vestibulum, eros sapien mattis libero, euismod congue neque nisi at ipsum. Mauris semper ipsum sit amet metus semper malesuada. Donec vel est justo, ac porta diam.</p>
+                <p>In ut est in orci commodo blandit. Cras rhoncus ultricies augue. Proin quam odio, venenatis ut tempus tristique, aliquet in velit. Pellentesque volutpat facilisis orci, ut congue mi rhoncus at. Nullam vehicula dignissim neque, sed rhoncus magna ultricies et.</p>
+            </div>
+        </li>
+      </ul>
+  </div>
+<!--<div class="container">
+    <div class="sub-container" id="chrono">CHRONO</div>
+    <div class="sub-container" id="vox">VOX</div>
+    <div class="sub-container" id="approfondimenti">APPROFONDIMENTI</div>
+  </div> -->
+  <div class="custom-cursor"></div>
+    
+  <script src="/cursor.js"></script>
+  </body>
+</html>
